@@ -2,17 +2,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 //Home
-import Home from './components/Food Ordering/Home';
-// Admin-Food Adding 
-import AddFood from './components/Food Ordering/Admin/Add Food/AddFood';
-import AdminFoods from './components/Food Ordering/Admin//Food/Foods';
- //User-Food Display,Order 
-import UserFoods from './components/Food Ordering/User/Food/Foods';
-import FoodDetails from './components/Food Ordering/User/Food/FoodDetails';
-import AddToCart from './components/Food Ordering/User/Cart/AddtoCart';
-import ViewCart from './components/Food Ordering/User/Cart/Carts';
-import AddDelivery from './components/Food Ordering/User/AddDelivery/AddDelivery';
-import EditCartItem from './components/Food Ordering/User/Cart/EditCartItem';
+import Home from './components/Event Planning/Home';
+// Admin-Event Adding 
+import AddEvent from './components/Event Planning/Admin/Add_Event/AddEvent';
+import AdminEvents from './components/Event Planning/Admin/Event/Events';
+import ViewEvent from './components/Event Planning/Admin/Event/ViewEvent';
+import UserEvents from './components/Event Planning/User/Events/ViewEvents';
+
+
 
 function App() {
   return (
@@ -22,17 +19,14 @@ function App() {
           {/* Defult Home */}
         <Route exact path="/" element={<Home />} />
 
-          {/* Admin-Food Adding */}
-          <Route exact path="/add-food" element={<AddFood />} />
-          <Route exact path="/admin-foods" element={<AdminFoods />} />
+          {/* Admin-Event Adding Adding */}
+          <Route exact path="/add-event" element={<AddEvent />} />
+          <Route exact path="/admin-events" element={<AdminEvents />} />
+          <Route exact path="/admin-events/:id" element={<ViewEvent />} />
+         
 
-           {/* User-Food Display,Order */}
-          <Route exact path="/user-foods" element={<UserFoods />} />
-          <Route exact path="/food-details/:id" element={<FoodDetails />} />
-          <Route exact path="/add-to-cart" element={<AddToCart />} />
-          <Route exact path="/view-cart" element={<ViewCart />} />
-          <Route exact path="/add-delivery" element={<AddDelivery />} />
-          <Route path="/update-cart/:id" element={<EditCartItem />} />
+          <Route exact path="/user-events" element={<UserEvents />} />
+
 
         </Routes>
       </Router>
