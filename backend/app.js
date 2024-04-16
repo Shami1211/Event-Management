@@ -4,14 +4,14 @@ const cors = require("cors");
 const app = express();
 
 // Routers
-const foodRouter = require("./Routes/FoodRoute");
+const eventRouter = require("./Routes/EventRoute");
 const cartRouter = require("./Routes/CartRoute");
 const deliveryRouter = require("./Routes/DeliveryRoute");
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/foods", foodRouter); // localhost:5000/foods
+app.use("/events", eventRouter); // localhost:5000/events
 app.use("/carts", cartRouter);// localhost:5000/carts 
 app.use("/deliveries", deliveryRouter);
 
