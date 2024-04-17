@@ -10,7 +10,7 @@ export default function Home() {
         <Link to="/add-event">
           <button>Admin</button>
         </Link>
-        <h2>Are you going to View foods?(USER)</h2>
+        <h2>Are you going to View all Events?(USER)</h2>
         <Link to="/user-events">
           <button>User</button>
         </Link>

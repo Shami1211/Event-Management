@@ -66,7 +66,7 @@ const AddEvent = () => {
         </div>
         <div>
           <label className="event-label">Time:</label>
-          <input className="event-input" type="number" name="time" value={inputs.time} onChange={handleChange} required />
+          <input className="event-input" type="text" name="time" value={inputs.time} onChange={handleChange} required />
         </div>
         <div>
           <label className="event-label">Price:</label>
